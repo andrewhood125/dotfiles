@@ -1,0 +1,7 @@
+[user]
+  name = Andrew Hood
+  email = andrewhood125@gmail.com
+[push]
+  default = simple
+[color]
+  ui = true

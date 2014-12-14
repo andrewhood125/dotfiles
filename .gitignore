@@ -1,0 +1,8 @@
+*
+
+!.gitignore
+!.gitconfig
+!.janus/
+!.vimrc.after
+!.vimrc.before
+!.zshrc
