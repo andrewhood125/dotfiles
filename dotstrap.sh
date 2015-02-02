@@ -1,1 +1,1 @@
-deps=(vim zsh ruby ack ctags janus)
+deps=(vim zsh curl ruby ack ctags janus)
