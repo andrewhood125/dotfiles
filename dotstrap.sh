@@ -1,1 +1,1 @@
-deps=(vim zsh ruby)
+deps=(vim zsh ruby janus)
