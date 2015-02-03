@@ -79,3 +79,5 @@ if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
 # Add composer bin to PATH
 export PATH="$PATH:$HOME/.composer/vendor/bin"
+# add npm bin
+export PATH="$PATH:$(npm bin)"
