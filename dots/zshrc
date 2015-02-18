@@ -39,11 +39,28 @@ export EDITOR='vim'
 # brew all the things!
 export HOMEBREW_GITHUB_API_TOKEN=f442262850ccba56c509ce0d0931e4082991d1b2
 
-if which brew > /dev/null; then export PATH="$(brew --prefix homebrew/php/php56)/bin:$PATH"; else echo "Brew not found"; fi
+# Conditional PATH
 
-if which rbenv > /dev/null; then eval "$(rbenv init -)"; else echo "rbenv not found"; fi
+if which brew > /dev/null; then
+  export PATH="$(brew --prefix homebrew/php/php56)/bin:$PATH";
+else
+  echo "brew not found";
+fi
 
-# Add composer bin to PATH
-export PATH="$PATH:$HOME/.composer/vendor/bin"
-# add npm bin
-export PATH="$PATH:$(npm bin)"
+if which rbenv > /dev/null; then
+  eval "$(rbenv init -)";
+else
+  echo "rbenv not found";
+fi
+
+if which composer > /dev/null; then
+  export PATH="$PATH:$HOME/.composer/vendor/bin"
+else
+  echo "composer not found";
+fi
+
+if which npm > /dev/null; then
+  export PATH="$PATH:$(npm bin)"
+else
+  echo "npm not found";
+fi
