@@ -64,3 +64,5 @@ if which npm > /dev/null; then
 else
   echo "npm not found";
 fi
+
+ export PATH="$PATH:$HOME/.establish/bin"
