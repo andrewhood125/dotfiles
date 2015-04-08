@@ -39,8 +39,8 @@ export EDITOR='vim'
 # brew all the things!
 export HOMEBREW_GITHUB_API_TOKEN=f442262850ccba56c509ce0d0931e4082991d1b2
 
-# Conditional PATH
-
+## Conditional PATH
+###################
 if which brew > /dev/null; then
   export PATH="$(brew --prefix homebrew/php/php56)/bin:$PATH";
 else
@@ -61,8 +61,13 @@ fi
 
 if which npm > /dev/null; then
   export PATH="$PATH:$(npm bin)"
+  export PATH=$HOME/.node/bin:$PATH
 else
   echo "npm not found";
 fi
 
- export PATH="$PATH:$HOME/.establish/bin"
+# Include some extra functions
+. "${HOME}/.sugar"
+
+# Add Establish to PATH
+export PATH="$PATH:$HOME/.establish/bin"
