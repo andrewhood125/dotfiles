@@ -1,0 +1,4 @@
+google() {
+  IFS="+"
+  open "https://google.com/search?q=$*"
+}
