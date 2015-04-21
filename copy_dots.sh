@@ -1,1 +1,4 @@
-for i in `ls dots`; do cp -i dots/$i ~/.$i; done
+for i in `ls dots`; do
+  colordiff ~/.$i dots/$i
+  cp -i dots/$i ~/.$i
+done
