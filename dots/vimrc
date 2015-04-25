@@ -6,9 +6,14 @@ filetype plugin indent on
 " General
 let mapleader = ","
 
+" Tabs
+set tabstop=2 shiftwidth=2 expandtab
+
 " NerdTree
 map <Leader>n :NERDTreeToggle<CR>
 
 " Visuals
 colorscheme xoria256
+" Show Line numbers
+set number
 
