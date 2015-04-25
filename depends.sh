@@ -2,7 +2,7 @@ deps=(homestead vim-nerdcommenter vim-nerdtree vim-supertab vim-sensible vim-xor
 
 _after() {
   for i in `ls dots`; do
-    colordiff dots/$i ~/.$i
+    colordiff ~/.$i dots/$i 
     cp -i dots/$i ~/.$i
   done
 
