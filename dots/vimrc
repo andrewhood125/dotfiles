@@ -1,0 +1,14 @@
+" Pathogen
+execute pathogen#infect()
+syntax on
+filetype plugin indent on
+
+" General
+let mapleader = ","
+
+" NerdTree
+map <Leader>n :NERDTreeToggle<CR>
+
+" Visuals
+colorscheme xoria256
+
