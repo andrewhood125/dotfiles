@@ -1,4 +1,28 @@
 google() {
+  # IFS is a special var which sets the delimeter
+  # in conjunction with $*
+  # http://tldp.org/LDP/abs/html/internalvariables.html#IFSREF
   IFS="+"
   open "https://google.com/search?q=$*"
 }
+
+vimrc() {
+  vim ~/.vimrc
+  reload
+}
+
+zshrc() {
+  vim ~/.zshrc
+  reload
+}
+
+sugar() {
+  vim ~/.sugar
+  reload
+}
+
+reload() {
+  source ~/.zshrc
+}
+
+
