@@ -1,4 +1,4 @@
-deps=(homestead vim-snippets vim-blade vim-emmet vim-autoformat vim-nerdcommenter vim-ruby vim-syntastic vim-nerdtree vim-supertab vim-sensible vim-xoria256 vim-ctrlp zsh-syntax-highlighting colordiff)
+deps=(homestead vim-delimitmate vim-snippets vim-blade vim-emmet vim-autoformat vim-nerdcommenter vim-ruby vim-syntastic vim-nerdtree vim-supertab vim-sensible vim-xoria256 vim-ctrlp zsh-syntax-highlighting colordiff)
 
 _after() {
   for i in `ls dots`; do
