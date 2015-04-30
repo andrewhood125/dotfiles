@@ -37,3 +37,6 @@ let g:syntastic_check_on_wq = 0
 "  %    :  saves and restores the buffer list
 "  n... :  where to save the viminfo files
 set viminfo='10,\"100,:20,%,n~/.viminfo'
+
+" PHP tabs
+autocmd FileType php set tabstop=4 shiftwidth=4 expandtab
