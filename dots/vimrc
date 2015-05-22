@@ -6,6 +6,11 @@ filetype plugin indent on
 " General
 let mapleader = ","
 set nowrap
+set cursorline
+
+" Highlighting Search
+set hlsearch
+map <Leader>hs :noh<CR>
 
 " Tabs
 set tabstop=2 shiftwidth=2 expandtab
