@@ -12,6 +12,9 @@ set cursorline
 set hlsearch
 map <Leader>hs :noh<CR>
 
+"Autoformat
+map <Leader>f :Autoformat<CR>
+
 " Tabs
 set tabstop=2 shiftwidth=2 expandtab
 
