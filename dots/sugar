@@ -8,7 +8,6 @@ google() {
 
 vimrc() {
   vim ~/.vimrc
-  reload
 }
 
 zshrc() {
@@ -25,4 +24,4 @@ reload() {
   source ~/.zshrc
 }
 
-
+# vim: set ft=sh :

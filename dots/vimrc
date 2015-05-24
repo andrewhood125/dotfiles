@@ -7,6 +7,7 @@ filetype plugin indent on
 let mapleader = ","
 set nowrap
 set cursorline
+set modeline
 
 " Highlighting Search
 set hlsearch
