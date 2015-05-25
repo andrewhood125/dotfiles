@@ -12,6 +12,9 @@ set tabstop=2 shiftwidth=2 expandtab
 colorscheme xoria256
 syntax on
 
+" ignore all the things
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.pdf,*.epub
+
 " Highlighting Search
 set hlsearch
 map <Leader>hs :noh<CR>
@@ -58,3 +61,7 @@ let g:airline_symbols.branch = ''
 let g:airline_symbols.paste = 'ρ'
 let g:airline_symbols.readonly = ''
 let g:airline_symbols.whitespace = 'Ξ'
+
+" CtrlP
+let g:ctrlp_max_files=0
+let g:ctrlp_cache_dir = $HOME.'.cache/ctrlp'
