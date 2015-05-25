@@ -13,7 +13,7 @@ colorscheme xoria256
 syntax on
 
 " ignore all the things
-set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.pdf,*.epub
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.pdf,*.epub,node_modules,*.class
 
 " Highlighting Search
 set hlsearch
