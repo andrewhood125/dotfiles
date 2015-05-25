@@ -48,4 +48,19 @@ let g:syntastic_check_on_wq = 0
 set viminfo='10,\"100,:20,%,n~/.viminfo'
 
 " PHP tabs
-autocmd FileType php set tabstop=4 shiftwidth=4 expandtab
+autocmd FileType php set tabstop=4 shiftwidth=4 expandtab 
+
+" vim-airline
+if !exists('g:airline_symbols')
+  let g:airline_symbols = {}
+endif
+
+let g:airline_left_sep = '▶'
+let g:airline_right_sep = '◀'
+let g:airline_symbols.linenr = '␊'
+let g:airline_symbols.linenr = '␤'
+let g:airline_symbols.linenr = '¶'
+let g:airline_symbols.branch = ''
+let g:airline_symbols.paste = 'ρ'
+let g:airline_symbols.readonly = ''
+let g:airline_symbols.whitespace = 'Ξ'
