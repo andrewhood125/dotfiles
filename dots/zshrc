@@ -25,12 +25,6 @@ export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
 
 export EDITOR='vim'
 
-# Compilation flags
-# export ARCHFLAGS="-arch x86_64"
-
-# ssh
-# export SSH_KEY_PATH="~/.ssh/dsa_id"
-
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
@@ -39,38 +33,26 @@ export EDITOR='vim'
 # brew all the things!
 export HOMEBREW_GITHUB_API_TOKEN=f442262850ccba56c509ce0d0931e4082991d1b2
 
-## Conditional PATH
+## PATH
 ###################
-if which brew > /dev/null; then
-  export PATH="$(brew --prefix homebrew/php/php56)/bin:$PATH";
-else
-  echo "brew not found";
-fi
-
 if which rbenv > /dev/null; then
   eval "$(rbenv init -)";
 else
   echo "rbenv not found";
 fi
 
-if which composer > /dev/null; then
-  export PATH="$PATH:$HOME/.composer/vendor/bin"
-else
-  echo "composer not found";
-fi
+# composer
+export PATH="$PATH:$HOME/.composer/vendor/bin"
 
-if which npm > /dev/null; then
-  export PATH="$PATH:$(npm bin)"
-  export PATH=$HOME/.node/bin:$PATH
-else
-  echo "npm not found";
-fi
-
-# Include some extra functions
-. "${HOME}/.sugar"
+# npm
+export PATH="$PATH:$(npm bin)"
+export PATH=$HOME/.node/bin:$PATH
 
 # Add Establish to PATH
 export PATH="$PATH:$HOME/.establish/bin"
 
 # local vendor bin to PATH
 export PATH="$PATH:./vendor/bin"
+
+# Include some extra functions
+. "${HOME}/.sugar"
