@@ -5,7 +5,7 @@ filetype plugin indent on
 " General
 let mapleader = ","
 set nowrap
-set cursorline "highlight line the curson is on"
+"set cursorline "highlight line the curson is on"
 set modeline "read settings from modelines"
 set number " Show Line numbers
 set tabstop=2 shiftwidth=2 expandtab
@@ -14,6 +14,10 @@ syntax on
 
 " ignore all the things
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.pdf,*.epub,node_modules,*.class
+
+"Window sizing
+map <Leader>= :vertical resize +10<CR>
+map <Leader>- :vertical resize -10<CR>
 
 " Highlighting Search
 set hlsearch
@@ -24,6 +28,8 @@ map <Leader>f :Autoformat<CR>
 
 " NerdTree
 map <Leader>n :NERDTreeToggle<CR>
+let NERDTreeShowHidden=1
+let NERDTreeWinSize=40
 
 " Syntastic
 set statusline+=%#warningmsg#
