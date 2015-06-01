@@ -19,6 +19,12 @@ set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.pdf,*.epub,node_modules,*.class
 map <Leader>= :vertical resize +10<CR>
 map <Leader>- :vertical resize -10<CR>
 
+"tags
+map <Leader>t :tag 
+map <Leader>tn :tnext<CR>
+map <Leader>tp :tprevious<CR>
+map <Leader>p :pop<CR>
+
 " Highlighting Search
 set hlsearch
 map <Leader>hs :noh<CR>
@@ -35,10 +41,8 @@ let NERDTreeWinSize=40
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
-
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
 " viminfo
@@ -71,3 +75,4 @@ let g:airline_symbols.whitespace = 'Ξ'
 " CtrlP
 let g:ctrlp_max_files=0
 let g:ctrlp_cache_dir = $HOME.'.cache/ctrlp'
+let g:ctrlp_show_hidden = 1
