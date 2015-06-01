@@ -7,4 +7,4 @@ Usage
 -----
 
 These dots can automagically be installed and configured using
-[dotstrap](https://github.com/andrewhood125/dotstrap)
+[establish](https://github.com/andrewhood125/establish)
