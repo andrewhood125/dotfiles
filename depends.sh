@@ -1,4 +1,4 @@
-deps=(homestead ctags htop vim-ack vim-trailing-whitespace vim-delimitmate vim-airline vim-snippets vim-scala vim-blade vim-emmet vim-autoformat vim-nerdcommenter vim-ruby vim-syntastic vim-nerdtree vim-supertab vim-sensible vim-xoria256 vim-ctrlp zsh-syntax-highlighting colordiff)
+deps=(homestead git-extras ctags htop vim-ack vim-trailing-whitespace vim-delimitmate vim-airline vim-snippets vim-scala vim-blade vim-emmet vim-autoformat vim-nerdcommenter vim-ruby vim-syntastic vim-nerdtree vim-supertab vim-sensible vim-xoria256 vim-ctrlp zsh-syntax-highlighting colordiff)
 
 _after() {
   for i in `ls dots`; do
