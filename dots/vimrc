@@ -13,7 +13,7 @@ colorscheme xoria256
 syntax on
 
 " ignore all the things
-set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.pdf,*.epub,node_modules,*.class
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.pdf,*.epub,node_modules,*.class,.idea,.idea_modules
 
 "Window sizing
 map <Leader>= :vertical resize +10<CR>
