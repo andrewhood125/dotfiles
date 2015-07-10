@@ -363,7 +363,7 @@
 	<key>NSWindow Frame Preferences</key>
 	<string>1515 254 924 485 1440 -180 1920 1057 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>1440 -180 1920 1058 1440 -180 1920 1057 </string>
+	<string>2400 -157 954 1034 1440 -180 1920 1057 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>2910 148 650 426 1440 -180 1920 1057 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
@@ -1205,6 +1205,10 @@
 	<integer>0</integer>
 	<key>WordCharacters</key>
 	<string>/-+\~_.</string>
+	<key>findIgnoreCase_iTerm</key>
+	<true/>
+	<key>findRegex_iTerm</key>
+	<false/>
 	<key>iTerm Version</key>
 	<string>2.1.1</string>
 </dict>

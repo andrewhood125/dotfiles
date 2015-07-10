@@ -5,19 +5,23 @@ filetype plugin indent on
 " General
 let mapleader = ","
 set nowrap
-"set cursorline "highlight line the curson is on"
+"highlight line the curson is on"
+"set cursorline
 set modeline "read settings from modelines"
 set number " Show Line numbers
-set tabstop=2 shiftwidth=2 expandtab
+set tabstop=4 shiftwidth=4 expandtab
 colorscheme xoria256
 syntax on
 
 " ignore all the things
-set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.pdf,*.epub,node_modules,*.class,.idea,.idea_modules
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.pdf,*.epub,node_modules,*.class,.idea,.idea_modules,*.scssc
 
 "Window sizing
 map <Leader>= :vertical resize +10<CR>
 map <Leader>- :vertical resize -10<CR>
+
+"Open new splits on the right
+set splitright
 
 "tags
 map <Leader>t :tag 
@@ -36,14 +40,6 @@ map <Leader>f :Autoformat<CR>
 map <Leader>n :NERDTreeToggle<CR>
 let NERDTreeShowHidden=1
 let NERDTreeWinSize=40
-
-" Syntastic
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_wq = 0
 
 " viminfo
 " Tell vim to remember certain things when we exit

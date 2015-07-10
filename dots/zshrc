@@ -16,43 +16,27 @@ plugins=(brew bower composer history-substring-search git zsh-syntax-highlightin
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
-
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
-# export MANPATH="/usr/local/man:$MANPATH"
-
-# You may need to manually set your language environment
-# export LANG=en_US.UTF-8
-
 export EDITOR='vim'
-
-# Set personal aliases, overriding those provided by oh-my-zsh libs,
-# plugins, and themes. Aliases can be placed here, though oh-my-zsh
-# users are encouraged to define aliases within the ZSH_CUSTOM folder.
-# For a full list of active aliases, run `alias`.
-
-# brew all the things!
 export HOMEBREW_GITHUB_API_TOKEN=f442262850ccba56c509ce0d0931e4082991d1b2
 
-## PATH
+## Conditional PATH
 ###################
-if which rbenv > /dev/null; then
-  eval "$(rbenv init -)";
+if which npm > /dev/null; then
+  export PATH="$PATH:$(npm bin)"
+  export PATH=$HOME/.node/bin:$PATH
 else
-  echo "rbenv not found";
+  echo "npm not found";
 fi
 
-# composer
-export PATH="$PATH:$HOME/.composer/vendor/bin"
+# Include some extra functions
+. "${HOME}/.sugar"
 
-# npm
-export PATH="$PATH:$(npm bin)"
-export PATH=$HOME/.node/bin:$PATH
+# Just computer specific stuff
+. "${HOME}/.privaterc"
 
 # Add Establish to PATH
 export PATH="$PATH:$HOME/.establish/bin"
 
 # local vendor bin to PATH
 export PATH="$PATH:./vendor/bin"
-
-# Include some extra functions
-. "${HOME}/.sugar"

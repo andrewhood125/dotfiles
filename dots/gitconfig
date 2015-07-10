@@ -1,9 +1,10 @@
 [user]
-  name = Andrew Hood
-  email = andrewhood125@gmail.com
+    name = Andrew Hood
+    email = andrewhood125@gmail.com
+    username = andrewhood125
 [color]
-  ui = true
+    ui = true
 [push]
-  default = simple
+    default = simple
 [core]
-  excludesfile = ~/.gitignore
+    excludesfile = ~/.gitignore

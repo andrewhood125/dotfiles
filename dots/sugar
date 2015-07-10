@@ -24,26 +24,5 @@ reload() {
   source ~/.zshrc
 }
 
-nukeit() {
-  make clean && \
-  sbt update && \
-  make compile && \
-  make css
-}
-
-watch() {
-  SLEEP=$1
-  shift
-  while true; do
-    echo -e "\n"
-    date
-    echo -e "\n"
-    "$@"
-    sleep $SLEEP;
-  done
-}
-
-salmon() {
-  git pull upstream $@
-}
+alias tags='git tag --list | gsort --version-sort'
 # vim: set ft=sh :
