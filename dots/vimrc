@@ -15,6 +15,8 @@ syntax on
 
 " ignore all the things
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.pdf,*.epub,node_modules,*.class,.idea,.idea_modules,*.scssc
+set wildignore+=*/vendor/*
+set wildignore+=*/node_modules/*
 
 "Window sizing
 map <Leader>= :vertical resize +10<CR>
@@ -38,6 +40,7 @@ map <Leader>f :Autoformat<CR>
 
 " NerdTree
 map <Leader>n :NERDTreeToggle<CR>
+map <Leader>N :NERDTreeFind<CR>
 let NERDTreeShowHidden=1
 let NERDTreeWinSize=40
 

@@ -33,7 +33,7 @@ fi
 . "${HOME}/.sugar"
 
 # Just computer specific stuff
-. "${HOME}/.privaterc"
+. "${HOME}/.privaterc" &>/dev/null
 
 # Add Establish to PATH
 export PATH="$PATH:$HOME/.establish/bin"
