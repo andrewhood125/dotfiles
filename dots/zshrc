@@ -40,3 +40,6 @@ export PATH="$PATH:$HOME/.establish/bin"
 
 # local vendor bin to PATH
 export PATH="$PATH:./vendor/bin"
+
+# Add sassy to PATH
+export PATH="$PATH:$HOME/.sassy/bin"

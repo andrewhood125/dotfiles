@@ -12,9 +12,20 @@ set number " Show Line numbers
 set tabstop=4 shiftwidth=4 expandtab
 colorscheme xoria256
 syntax on
+set list
+
+"Tabs
+map <Leader>t :tabedit<CR>
+map <Leader>[ :tabprevious<CR>
+map <Leader>] :tabnext<CR>
 
 " ignore all the things
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.pdf,*.epub,node_modules,*.class,.idea,.idea_modules,*.scssc
+set wildignore+=**/vendor/**
+set wildignore+=**/vendors/**
+set wildignore+=**/target/**
+set wildignore+=**/coverage/**
+set wildignore+=*.cache
 
 "Window sizing
 map <Leader>= :vertical resize +10<CR>
@@ -24,10 +35,10 @@ map <Leader>- :vertical resize -10<CR>
 set splitright
 
 "tags
-map <Leader>t :tag 
 map <Leader>tn :tnext<CR>
 map <Leader>tp :tprevious<CR>
 map <Leader>p :pop<CR>
+map <Leader>l :tag<CR>
 
 " Highlighting Search
 set hlsearch
@@ -72,3 +83,19 @@ let g:airline_symbols.whitespace = 'Ξ'
 let g:ctrlp_max_files=0
 let g:ctrlp_cache_dir = $HOME.'.cache/ctrlp'
 let g:ctrlp_show_hidden = 1
+
+" Syntastic
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+let g:syntastic_javascript_checkers = ['']
+let g:syntastic_javascript_checkers = ['eslint', 'jshint']
+let g:syntastic_html_tidy_exec = 'tidy5'
+
+"Silver Searcher
+let g:ackprg = 'ag --nogroup --nocolor --column'
