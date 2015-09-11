@@ -1,2 +1,5 @@
 .vagrant
 .DS_Store
+.eslintrc
+eslint.json
+screenlog.0
