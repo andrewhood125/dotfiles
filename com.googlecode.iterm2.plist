@@ -361,11 +361,11 @@
 	<key>NSWindow Frame NSFontPanel</key>
 	<string>2523 33 445 77 1440 -180 1920 1057 </string>
 	<key>NSWindow Frame Preferences</key>
-	<string>1979 111 924 485 1440 -180 1920 1057 </string>
+	<string>114 392 924 485 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>1440 -180 1920 1058 1440 -180 1920 1057 </string>
+	<string>1440 -157 1914 1034 1440 -180 1920 1057 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>50 22 1386 855 0 0 1440 877 </string>
+	<string>371 358 650 426 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
 	<string>162 91 650 426 0 0 1440 877 </string>
 	<key>New Bookmarks</key>
@@ -1099,7 +1099,7 @@
 	<key>NoSyncTimeOfLastPromo</key>
 	<real>453677815.007034</real>
 	<key>NoSyncTimeOfLastPromoDownload</key>
-	<real>464118558.85695702</real>
+	<real>465763126.65667099</real>
 	<key>OnlyWhenMoreTabs</key>
 	<true/>
 	<key>OpenArrangementAtStartup</key>
@@ -1155,6 +1155,8 @@
 	<integer>8</integer>
 	<key>RightOption</key>
 	<integer>3</integer>
+	<key>SUAutomaticallyUpdate</key>
+	<true/>
 	<key>SUEnableAutomaticChecks</key>
 	<true/>
 	<key>SUFeedURL</key>
@@ -1162,10 +1164,12 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2015-09-16T17:48:27Z</date>
+	<date>2015-10-05T18:38:44Z</date>
 	<key>SavePasteHistory</key>
 	<false/>
 	<key>ShowBookmarkName</key>
+	<true/>
+	<key>ShowFullScreenTabBar</key>
 	<true/>
 	<key>ShowPaneTitles</key>
 	<true/>
@@ -1210,6 +1214,6 @@
 	<key>findRegex_iTerm</key>
 	<false/>
 	<key>iTerm Version</key>
-	<string>2.1.1</string>
+	<string>2.1.3</string>
 </dict>
 </plist>

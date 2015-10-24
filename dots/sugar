@@ -25,4 +25,6 @@ reload() {
 }
 
 alias tags='git tag --list | gsort --version-sort'
+alias :q='exit'
+
 # vim: set ft=sh :
