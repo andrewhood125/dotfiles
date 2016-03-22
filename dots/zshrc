@@ -18,16 +18,9 @@ source $ZSH/oh-my-zsh.sh
 # User configuration
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
 export EDITOR='vim'
-export HOMEBREW_GITHUB_API_TOKEN=f442262850ccba56c509ce0d0931e4082991d1b2
 
-## Conditional PATH
-###################
-if which npm > /dev/null; then
-  export PATH="$PATH:$(npm bin)"
-  export PATH=$HOME/.node/bin:$PATH
-else
-  echo "npm not found";
-fi
+export PATH="$PATH:$(npm bin)"
+export PATH=$HOME/.node/bin:$PATH
 
 # Include some extra functions
 . "${HOME}/.sugar"
@@ -41,8 +34,3 @@ export PATH="$PATH:$HOME/.establish/bin"
 # local vendor bin to PATH
 export PATH="$PATH:./vendor/bin"
 
-# Add sassy to PATH
-export PATH="$PATH:$HOME/.sassy/bin"
-
-# rbenv
-eval "$(rbenv init -)"

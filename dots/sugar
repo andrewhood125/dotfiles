@@ -24,6 +24,10 @@ reload() {
   source ~/.zshrc
 }
 
+add-fork() {
+    git remote add ${1:-'fork'} git@github.com:${1:-'andrewhood125'}/$(basename $(pwd))
+}
+
 alias tags='git tag --list | gsort --version-sort'
 alias :q='exit'
 
