@@ -23,6 +23,9 @@ Plugin 'kien/ctrlp.vim'
 Plugin 'StanAngeloff/php.vim.git'
 Plugin 'derekwyatt/vim-scala'
 Plugin 'vim-perl/vim-perl'
+Plugin 'mattn/emmet-vim'
+Plugin 'xsbeats/vim-blade'
+Plugin 'nathanaelkane/vim-indent-guides'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -36,7 +39,8 @@ colorscheme darth
 "highlight line the curson is on"
 "set cursorline
 set modeline "read settings from modelines"
-set number " Show Line numbers
+set relativenumber " Show relative line numbers
+set number
 set tabstop=4 shiftwidth=4 expandtab
 syntax on
 set list
@@ -137,3 +141,24 @@ map <Leader>so :Errors<CR>
 
 "Silver Searcher
 let g:ackprg = 'ag --nogroup --nocolor --column'
+
+"Syntax
+let g:autoformat_verbosemode = 1
+if !exists('g:formatters_blade')
+    let g:formatters_blade = ['htmlbeautify', 'tidy_html']
+endif
+
+"indent guides
+let g:indent_guides_guide_size = 1
+let g:indent_guides_enable_on_vim_startup = 1
+let g:indent_guides_auto_colors = 0
+let g:indent_guides_exclude_filetypes = ['help', 'nerdtree']
+let g:indent_guides_color_change_percent = 10
+let g:indent_guides_start_level = 2
+autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  ctermbg=239
+autocmd VimEnter,Colorscheme * :hi IndentGuidesEven ctermbg=236
+
+"Supertab
+let g:SuperTabLongestEnhanced = 1
+let g:SuperTabDefaultCompletionType = "context"
+set completeopt+=longest
