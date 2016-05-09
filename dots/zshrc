@@ -11,7 +11,7 @@ ZSH_THEME="ys"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(brew bower composer history-substring-search git zsh-syntax-highlighting)
+plugins=(brew bower bundler composer gem gulp history-substring-search git zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -34,3 +34,7 @@ export PATH="$PATH:$HOME/.establish/bin"
 # local vendor bin to PATH
 export PATH="$PATH:./vendor/bin"
 
+eval "$(rbenv init -)"
+
+# Add sassy to PATH
+export PATH="$PATH:$HOME/.sassy/bin"
