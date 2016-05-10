@@ -1,3 +1,7 @@
+command_not_found_handler() {
+    google "$@"
+}
+
 google() {
   # IFS is a special var which sets the delimeter
   # in conjunction with $*
@@ -27,8 +31,5 @@ reload() {
 add-fork() {
     git remote add ${1:-'fork'} git@github.com:${1:-'andrewhood125'}/$(basename $(pwd))
 }
-
-alias tags='git tag --list | gsort --version-sort'
-alias :q='exit'
 
 # vim: set ft=sh :

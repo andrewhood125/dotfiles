@@ -2,6 +2,7 @@
     name = Andrew Hood
     email = andrewhood125@gmail.com
     username = andrewhood125
+	signingkey = 84019982
 [color]
     ui = true
 [push]

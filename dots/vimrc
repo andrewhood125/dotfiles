@@ -97,6 +97,7 @@ set viminfo='10,\"100,:20,%,n~/.viminfo'
 
 " PHP tabs
 autocmd FileType php set tabstop=4 shiftwidth=4 expandtab
+autocmd FileType ruby set tabstop=2 shiftwidth=2 expandtab
 
 " vim-airline
 if !exists('g:airline_symbols')

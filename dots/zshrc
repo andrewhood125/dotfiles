@@ -25,6 +25,9 @@ export PATH=$HOME/.node/bin:$PATH
 # Include some extra functions
 . "${HOME}/.sugar"
 
+# Aliases
+. "${HOME}/.aliases"
+
 # Just computer specific stuff
 . "${HOME}/.privaterc" &>/dev/null
 
