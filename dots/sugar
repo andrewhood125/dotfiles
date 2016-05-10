@@ -10,6 +10,11 @@ google() {
   open "https://google.com/search?q=$*"
 }
 
+stackoverflow() {
+  IFS="+"
+  open "https://stackoverflow.com/search?q=$*"
+}
+
 vimrc() {
   vim ~/.vimrc
 }
