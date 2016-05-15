@@ -4,4 +4,4 @@ alias :q='exit'
 
 # git
 alias tags='git tag --list | gsort --version-sort'
-
+alias st='gst'

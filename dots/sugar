@@ -37,4 +37,15 @@ add-fork() {
     git remote add ${1:-'fork'} git@github.com:${1:-'andrewhood125'}/$(basename $(pwd))
 }
 
+notify_helper() {
+    contents=$1
+    title=$2
+    sleep $3
+    osascript -e "display notification \"${contents}\" with title \"${title}\" sound name \"Hero.aiff\""
+}
+
+notify() {
+    notify_helper "$1" "$2" "$3" &
+}
+
 # vim: set ft=sh :
