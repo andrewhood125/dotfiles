@@ -1,6 +1,7 @@
 # Exittttttt
 alias exi='exit'
 alias :q='exit'
+alias exot='exit'
 
 # git
 alias tags='git tag --list | gsort --version-sort'
