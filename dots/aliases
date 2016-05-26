@@ -1,5 +1,6 @@
 # Exittttttt
 alias exi='exit'
+alias :Q='exit'
 alias :q='exit'
 alias exot='exit'
 
