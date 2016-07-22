@@ -28,8 +28,8 @@ export PATH=$HOME/.node/bin:$PATH
 # Aliases
 . "${HOME}/.aliases"
 
-# Just computer specific stuff
-. "${HOME}/.privaterc" &>/dev/null
+# Computer specific stuff
+. "${HOME}/.privaterc" || echo "No ~/.privaterc"
 
 # Add Establish to PATH
 export PATH="$PATH:$HOME/.establish/bin"
@@ -37,7 +37,13 @@ export PATH="$PATH:$HOME/.establish/bin"
 # local vendor bin to PATH
 export PATH="$PATH:./vendor/bin"
 
+# rbenv
 eval "$(rbenv init -)"
 
 # Add sassy to PATH
 export PATH="$PATH:$HOME/.sassy/bin"
+#
+# Add composer to PATH
+export PATH="$PATH:$HOME/.composer/vendor/bin"
+
+ssh-add ~/.ssh/id_rsa

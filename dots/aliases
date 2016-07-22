@@ -3,7 +3,20 @@ alias exi='exit'
 alias :Q='exit'
 alias :q='exit'
 alias exot='exit'
+alias q='exit'
+alias quit='exit'
 
 # git
 alias tags='git tag --list | gsort --version-sort'
 alias st='gst'
+
+# vim
+alias im='vim'
+
+ag() {
+    /usr/local/bin/ag --ignore 'dist/' --ignore 'vendor/' --ignore 'public/assets/' "$@"
+}
+
+b() {
+    bundle exec "$@"
+}

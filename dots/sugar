@@ -39,13 +39,15 @@ add-fork() {
 
 notify_helper() {
     contents=$1
-    title=$2
-    sleep $3
+    title = "Hey\!"
+    sleep $2
     osascript -e "display notification \"${contents}\" with title \"${title}\" sound name \"Hero.aiff\""
 }
 
 notify() {
-    notify_helper "$1" "$2" "$3" &
+    msg="$1"
+    time="$2"
+    notify_helper "$msg" "$time" &
 }
 
 # vim: set ft=sh :
