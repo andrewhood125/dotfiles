@@ -32,6 +32,12 @@ Plugin 'xsbeats/vim-blade'
 Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'slim-template/vim-slim'
 Plugin 'rizzatti/dash.vim'
+Plugin 'chrisbra/Colorizer'
+Plugin 'pangloss/vim-javascript'
+Plugin 'mxw/vim-jsx'
+Plugin 'kopischke/vim-fetch'
+Plugin 'joonty/vdebug'
+
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -50,6 +56,8 @@ set number
 set tabstop=4 shiftwidth=4 expandtab
 syntax on
 set list
+set scrolloff=10
+imap jj <ESC>
 
 " pasting
 map <Leader>v :set invpaste paste?<CR>
@@ -101,10 +109,13 @@ set viminfo='10,\"100,:20,%,n~/.viminfo'
 
 "tabs
 autocmd FileType php set tabstop=4 shiftwidth=4 expandtab
-
 autocmd FileType yaml set tabstop=2 shiftwidth=2 expandtab
 autocmd FileType ruby set tabstop=2 shiftwidth=2 expandtab
 autocmd FileType scss set tabstop=2 shiftwidth=2 expandtab
+autocmd FileType javascript set tabstop=2 shiftwidth=2 expandtab
+autocmd FileType coffee set tabstop=2 shiftwidth=2 expandtab
+autocmd FileType eruby set tabstop=2 shiftwidth=2 expandtab
+autocmd FileType blade set tabstop=2 shiftwidth=2 expandtab
 
 " vim-airline
 if !exists('g:airline_symbols')
@@ -164,3 +175,15 @@ set completeopt+=longest
 
 "Fugitive
 set diffopt+=vertical
+
+" Copy buffer into OS clibboard
+map <Leader>copy :set clipboard=unnamed<CR>
+
+"rspec
+"
+map <Leader>t :!bundle exec rspec %<CR>
+
+"snippets
+ab psysh \Psy\Shell::debug(get_defined_vars());
+ab test /** @test */
+ab xdebug xdebug_break();

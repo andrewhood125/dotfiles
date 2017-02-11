@@ -20,3 +20,8 @@ ag() {
 b() {
     bundle exec "$@"
 }
+
+unicode() {
+    echo "¯\_(ツ)_/¯"
+    echo "(╯°□°）╯︵ ┻━┻"
+}
