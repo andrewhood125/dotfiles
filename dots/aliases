@@ -9,6 +9,8 @@ alias quit='exit'
 # git
 alias tags='git tag --list | gsort --version-sort'
 alias st='gst'
+alias greup='git reset HEAD~1'
+
 
 # vim
 alias im='vim'

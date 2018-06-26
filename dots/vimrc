@@ -8,9 +8,11 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'tpope/vim-fugitive'
+Plugin 'int3/vim-extradite'
 Plugin 'tpope/vim-sensible'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-rails'
+Plugin 'thoughtbot/vim-rspec'
 Plugin 'tpope/vim-bundler'
 Plugin 'marlun/vim-starwars'
 Plugin 'kchmck/vim-coffee-script'
@@ -19,11 +21,10 @@ Plugin 'rking/ag.vim'
 Plugin 'bronson/vim-trailing-whitespace'
 Plugin 'bling/vim-airline'
 Plugin 'Chiel92/vim-autoformat'
-Plugin 'scrooloose/syntastic'
 Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'ervandew/supertab'
-Plugin 'kien/ctrlp.vim'
+Plugin 'junegunn/fzf.vim'
 Plugin 'StanAngeloff/php.vim.git'
 Plugin 'derekwyatt/vim-scala'
 Plugin 'vim-perl/vim-perl'
@@ -37,7 +38,17 @@ Plugin 'pangloss/vim-javascript'
 Plugin 'mxw/vim-jsx'
 Plugin 'kopischke/vim-fetch'
 Plugin 'joonty/vdebug'
+Plugin 'leafgarland/typescript-vim'
+Plugin 'elzr/vim-json'
+Plugin 'w0rp/ale'
+Plugin 'davidbeckingsale/writegood.vim'
+Plugin 'posva/vim-vue'
 
+
+
+"FZF
+set rtp+=/usr/local/opt/fzf
+nnoremap <c-p> :FZF<cr>
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -57,7 +68,7 @@ set tabstop=4 shiftwidth=4 expandtab
 syntax on
 set list
 set scrolloff=10
-imap jj <ESC>
+setlocal spell
 
 " pasting
 map <Leader>v :set invpaste paste?<CR>
@@ -112,10 +123,16 @@ autocmd FileType php set tabstop=4 shiftwidth=4 expandtab
 autocmd FileType yaml set tabstop=2 shiftwidth=2 expandtab
 autocmd FileType ruby set tabstop=2 shiftwidth=2 expandtab
 autocmd FileType scss set tabstop=2 shiftwidth=2 expandtab
+autocmd FileType vue set tabstop=2 shiftwidth=2 expandtab
 autocmd FileType javascript set tabstop=2 shiftwidth=2 expandtab
 autocmd FileType coffee set tabstop=2 shiftwidth=2 expandtab
 autocmd FileType eruby set tabstop=2 shiftwidth=2 expandtab
 autocmd FileType blade set tabstop=2 shiftwidth=2 expandtab
+autocmd BufRead,BufNewFile *.yml.* set filetype=yaml
+autocmd BufRead,BufNewFile *.reek set filetype=yaml
+
+"text width
+au BufRead,BufNewFile *.md setlocal textwidth=80
 
 " vim-airline
 if !exists('g:airline_symbols')
@@ -143,6 +160,7 @@ let g:syntastic_check_on_open = 0
 let g:syntastic_check_on_wq = 0
 let g:syntastic_javascript_checkers = ['']
 let g:syntastic_javascript_checkers = ['eslint', 'jshint']
+let g:syntastic_ruby_checkers = ['rubocop', 'reek']
 let g:syntastic_html_tidy_exec = 'tidy5'
 
 map <Leader>ss :SyntasticCheck<CR>
@@ -180,10 +198,12 @@ set diffopt+=vertical
 map <Leader>copy :set clipboard=unnamed<CR>
 
 "rspec
-"
-map <Leader>t :!bundle exec rspec %<CR>
+let g:rspec_command = "!bundle exec rspec {spec}"
+map <Leader>t :call RunNearestSpec()<CR>
+map <Leader>ta :call RunCurrentSpecFile()<CR>
 
-"snippets
-ab psysh \Psy\Shell::debug(get_defined_vars());
-ab test /** @test */
-ab xdebug xdebug_break();
+map <leader>rubo :!bundle exec rubocop %
+
+" ALE
+let g:ale_lint_on_text_changed = 'never'
+let g:ale_lint_on_insert_leave = '1'

@@ -1,7 +1,3 @@
-command_not_found_handler() {
-    google "$@"
-}
-
 google() {
   # IFS is a special var which sets the delimeter
   # in conjunction with $*
