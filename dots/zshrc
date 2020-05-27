@@ -11,7 +11,7 @@ ZSH_THEME="ys"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(brew bower bundler gem gulp history-substring-search git zsh-syntax-highlighting)
+plugins=(brew bundler gem history-substring-search git)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -28,17 +28,13 @@ export PATH=$HOME/.node/bin:$PATH
 # Aliases
 . "${HOME}/.aliases"
 
-# Computer specific stuff
-. "${HOME}/.privaterc" || echo "No ~/.privaterc"
-
-# Add Establish to PATH
-export PATH="$PATH:$HOME/.establish/bin"
-
 # local vendor bin to PATH
 export PATH="$PATH:./vendor/bin"
 
-# rbenv
-eval "$(rbenv init -)"
 ssh-add ~/.ssh/id_rsa
 
 export REVIEW_BASE="master"
+
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"
+source $HOME/.rvm/scripts/rvm

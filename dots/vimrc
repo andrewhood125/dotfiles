@@ -37,7 +37,6 @@ Plugin 'chrisbra/Colorizer'
 Plugin 'pangloss/vim-javascript'
 Plugin 'mxw/vim-jsx'
 Plugin 'kopischke/vim-fetch'
-Plugin 'joonty/vdebug'
 Plugin 'leafgarland/typescript-vim'
 Plugin 'elzr/vim-json'
 Plugin 'w0rp/ale'
@@ -46,9 +45,6 @@ Plugin 'posva/vim-vue'
 
 
 
-"FZF
-set rtp+=/usr/local/opt/fzf
-nnoremap <c-p> :FZF<cr>
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -56,7 +52,7 @@ filetype plugin indent on    " required
 
 
 " General
-let mapleader = ","
+let mapleader = '\'
 set nowrap
 colorscheme darth
 "highlight line the curson is on"
@@ -70,8 +66,14 @@ set list
 set scrolloff=10
 setlocal spell
 
+map <Leader>w <C-w><C-w>
+
 " pasting
 map <Leader>v :set invpaste paste?<CR>
+
+"FZF
+set rtp+=/usr/local/opt/fzf
+map <Leader>p :FZF<cr>
 
 "Tabs
 map <Leader>t :tabedit<CR>
@@ -89,12 +91,6 @@ map <Leader>- :vertical resize -10<CR>
 
 "Open new splits on the right
 set splitright
-
-"tags
-map <Leader>tn :tnext<CR>
-map <Leader>tp :tprevious<CR>
-map <Leader>p :pop<CR>
-map <Leader>l :tag<CR>
 
 " Highlighting Search
 set hlsearch
@@ -191,8 +187,6 @@ let g:SuperTabLongestEnhanced = 1
 let g:SuperTabDefaultCompletionType = "context"
 set completeopt+=longest
 
-"Fugitive
-set diffopt+=vertical
 
 " Copy buffer into OS clibboard
 map <Leader>copy :set clipboard=unnamed<CR>
