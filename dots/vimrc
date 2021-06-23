@@ -50,7 +50,6 @@ Plugin 'posva/vim-vue'
 call vundle#end()            " required
 filetype plugin indent on    " required
 
-
 " General
 let mapleader = '\'
 set nowrap
@@ -74,6 +73,7 @@ map <Leader>v :set invpaste paste?<CR>
 "FZF
 set rtp+=/usr/local/opt/fzf
 map <Leader>p :FZF<cr>
+
 
 "Tabs
 map <Leader>t :tabedit<CR>

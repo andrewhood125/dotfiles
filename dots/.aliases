@@ -1,0 +1,18 @@
+# Exittttttt
+alias exi='exit'
+alias :Q='exit'
+alias :q='exit'
+alias exot='exit'
+alias q='exit'
+alias quit='exit'
+
+# git
+alias st='gst'
+
+# vim
+alias im='vim'
+
+# Short bundle exec
+b() {
+    bundle exec "$@"
+}
