@@ -96,3 +96,9 @@ export EDITOR='vim'
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 # Aliases
 source "${HOME}/.aliases"
+
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"
+
+# Use ag to ignore some files by default for FZF searching.
+export FZF_DEFAULT_COMMAND='ag --hidden -g .'

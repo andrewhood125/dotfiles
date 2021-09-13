@@ -11,7 +11,8 @@ Plug 'marlun/vim-starwars'
 Plug 'bling/vim-airline'
 Plug 'tpope/vim-surround'
 Plug 'thoughtbot/vim-rspec'
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'junegunn/fzf'
+Plug 'junegunn/fzf.vim'
 
 " Initialize plugin system
 call plug#end()
@@ -21,12 +22,16 @@ set scrolloff=10
 set splitright
 set tabstop=4 shiftwidth=4 expandtab nosmarttab
 colorscheme darth
+set nowrap
+set backspace=eol,indent,start
 
-"deoplete
-let g:deoplete#enable_at_startup = 1
+
+" FZF
+map <Leader>p :FZF<CR>
 
 " rspec
 map <Leader>t :call RunNearestSpec()<CR>
+let g:rspec_command = "!rspec {spec}"
 
 " NerdTree
 map <Leader>n :NERDTreeToggle<CR>
@@ -43,4 +48,3 @@ map <Leader>- :vertical resize -10<CR>
 
 " Highlighting Search
 map <Leader>hs :noh<CR>
-
