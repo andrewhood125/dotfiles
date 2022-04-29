@@ -13,6 +13,8 @@ Plug 'tpope/vim-surround'
 Plug 'thoughtbot/vim-rspec'
 Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
+Plug 'honza/vim-snippets'
+Plug 'SirVer/ultisnips'
 
 " Initialize plugin system
 call plug#end()
@@ -20,10 +22,11 @@ call plug#end()
 set number
 set scrolloff=10
 set splitright
-set tabstop=4 shiftwidth=4 expandtab nosmarttab
+set tabstop=2 shiftwidth=2 expandtab nosmarttab
 colorscheme darth
 set nowrap
 set backspace=eol,indent,start
+set hlsearch
 
 
 " FZF
@@ -48,3 +51,6 @@ map <Leader>- :vertical resize -10<CR>
 
 " Highlighting Search
 map <Leader>hs :noh<CR>
+
+"Jenkinsfile VIM syntax highlighting
+au BufNewFile,BufRead Jenkinsfile setf groovy
