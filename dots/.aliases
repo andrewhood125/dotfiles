@@ -16,3 +16,33 @@ alias im='vim'
 b() {
     bundle exec "$@"
 }
+
+# Search all the directories in PATH for a search term.
+#
+# EXAMPLE:
+#
+# cmdsearch openvpn
+cmdsearch() {
+  echo $PATH | tr ':' '\n' | xargs -I{} find {} -name "*$@*"
+}
+
+# Reload current shell
+reload() {
+  exec zsh
+}
+
+brew_search_info() {
+  brew search "$1" | tr ' ' '\n' | grep '^[a-z0-9\-_]' | xargs brew info
+}
+
+find_commands() {
+  sudo find $(echo $PATH | tr ':' ' ') -name "*$1*" | sort | uniq
+}
+
+find_and_delete_ds_store() {
+  find . -name '.DS_Store' -delete
+}
+
+git_untracked_files() {
+  comm -3 <(find * .* -type f -not -path '*.git/*' | sort) <(git ls-files | sort)
+}

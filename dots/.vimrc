@@ -15,6 +15,7 @@ Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
 Plug 'honza/vim-snippets'
 Plug 'SirVer/ultisnips'
+Plug 'tpope/vim-fugitive'
 
 " Initialize plugin system
 call plug#end()
